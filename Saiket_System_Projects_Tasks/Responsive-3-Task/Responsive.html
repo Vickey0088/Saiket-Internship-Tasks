@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Webpage Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: grid;
+      grid-template-areas: 
+        "header"
+        "toggle"
+        "sidebar"
+        "main"
+        "footer";
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+
+    header {
+      grid-area: header;
+      background: #2c3e50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+
+    aside {
+      grid-area: sidebar;
+      background: #a8d2db;
+      padding: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    aside ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    aside ul li {
+      margin: 1rem 0; 
+    }
+
+    aside ul li a {
+      text-decoration: none;
+      color: #2c3e50;
+      font-weight: bold;
+    }
+
+    aside ul li a:hover {
+      color: #2980b9;
+    }
+
+    main {
+      grid-area: main;
+      background: #f9f9f9;
+      padding: 1rem;
+    }
+
+    main img {
+      max-width: 100%;
+      height: auto;
+      margin: 1rem 0;
+      border-radius: 8px;
+    }
+
+    footer {
+      grid-area: footer;
+      background: #2c3e50;
+      color: white;
+      position: relative;
+      text-align: center;
+         }
+
+         footer ul li{
+          display: inline-block;
+          margin-right: 60px;
+         }
+
+   
+
+    @media (min-width: 768px) {
+      body {
+        grid-template-areas: 
+          "header header"
+          "toggle toggle"
+          "sidebar main"
+          "footer footer";
+        grid-template-columns: 250px 1fr;
+      }
+
+
+      aside {
+        min-height: 100vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Web Development Internship</h1>
+  </header>
+
+  
+
+  <aside id="sidebar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </aside>
+
+  <main>
+    <h2>Saiket Systems (Internship)</h2><br><br>
+    <p>Web development is the process of building and maintaining websites and web applications. It involves a combination of frontend (HTML, CSS, JavaScript) and backend technologies (like Node.js, databases, etc.) to create functional, user-friendly digital experiences.</p>
+
+    <img src="https://tse4.mm.bing.net/th?id=OIP.-8OtOygZvwI1Qzk8TVf8CQHaFP&pid=Api&P=0&h=180" alt="Saiket Systems Internship" />
+
+    <p>During my internship at <strong>Saiket Systems</strong>, I had the opportunity to enhance my skills in responsive web design, dynamic content rendering, and real-world project collaboration. This experience helped me understand how professional web applications are planned, developed, and deployed with best practices in mind.</p>
+
+    <p>From creating responsive layouts to integrating interactive elements, the internship gave me a solid foundation in modern web development workflows and tools.</p>
+  </main>
+
+  <footer>
+    <ul>
+      <li><p>@Copyright-2025</p></li>
+      <li><p>@Webdevelopment</p></li>
+      <li><p>@SaiketSystems</p></li>
+      <li><p>@VickeyYadav-2025</p></li>
+    </ul>
+  </footer>
+
+ 
+</body>
+</html>
